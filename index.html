@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Registration Form</title>
+</head>
+<body onload='document.getElementById("name").focus()'>
+    <div class="registrationForm">
+        <h2>Registration Form</h2>
+        <form class="formWithValidation" name="form">  
+            <div>
+                <label>Name:</label>
+                <input type="text" class="name" id="name" onchange="validateName(document.getElementById('name'))">
+            </div>
+            <div>
+                <label>Phone:</label>
+                <input type="tel" class="phone" id="phone" onchange="validatePhone(document.getElementById('phone'))">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" class="email" id="email" name="email" onchange="validateEmail(document.getElementById('email'))">
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" class="password" id="password" onchange="validatePassword(document.getElementById('password'))">
+            </div>
+            <div class="button">
+                <button type="submit" name="submit" class="registerButton" id="registerButton">Register</button>
+            </div>
+        </form>  
+    </div>
+    <script src="./scripts.js"></script>
+    <script src="./validationLibrary.js"></script>
+</body>
+</html>
